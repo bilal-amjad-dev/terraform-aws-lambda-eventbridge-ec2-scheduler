@@ -28,7 +28,30 @@ Targets:
 ![Image](https://github.com/user-attachments/assets/2a46cea0-feca-4f48-80d0-bbf9ae6005de)
 
 
-## Verify the Stop EC2 Schedule:
+Verify the Stop EC2 Schedule:
+Similarly, navigate back to the Rules list and click on the rule named stop-ec2-daily-schedule.
+
+![Image](https://github.com/user-attachments/assets/2e4067cd-8fe1-4ff2-b6a1-d3072225c5f5)
+
+![Image](https://github.com/user-attachments/assets/1bb638d0-1644-4d6d-9531-8e5315577bea)
+
+- Observe the schedule_expression: You will see cron(0 12 ? * MON-FRI *).
+- Understand the Time Translation: This cron expression specifies 12:00 PM UTC. Translating this to PKT (UTC+5), it becomes 5:00 PM PKT (12:00 UTC + 5 hours = 17:00 PKT). This ensures our instance is scheduled to stop at the end of the workday, Monday through Friday.
+
+
+Targets:
+
+![Image](https://github.com/user-attachments/assets/fdac68b8-b8ee-4753-a028-45719ecb1053)
+
+
+---
+
+
+
+
+
+
+
 
 
 

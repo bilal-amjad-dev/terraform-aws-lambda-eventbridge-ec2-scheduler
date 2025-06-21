@@ -29,6 +29,8 @@ Targets:
 
 
 Verify the Stop EC2 Schedule:
+
+
 Similarly, navigate back to the Rules list and click on the rule named stop-ec2-daily-schedule.
 
 ![Image](https://github.com/user-attachments/assets/2e4067cd-8fe1-4ff2-b6a1-d3072225c5f5)
@@ -47,15 +49,34 @@ Targets:
 ---
 
 
+### Verifying Deployment: Lambda Functions
+
+
+With our EventBridge schedules confirmed, the next step is to ensure our Lambda functions, which execute the actual start and stop actions, have been correctly deployed by Terraform.
+
+![Image](https://github.com/user-attachments/assets/c7c9122d-7366-4ea5-a93d-7758ac016a96)
+
+StartEC2Daily
+![Image](https://github.com/user-attachments/assets/5ae752f4-7e49-46d2-8e65-f6bfd016852a)
+![Image](https://github.com/user-attachments/assets/c3b2c8bf-ff86-4be7-9831-77ee686e4f92)
+
+StopEC2Daily
+![Image](https://github.com/user-attachments/assets/eedee304-352d-430c-b930-01e2730fea1b)
+![Image](https://github.com/user-attachments/assets/db28c25a-7515-4969-b86b-8d038ad7f378)
+
+---
+
+### Verifying Execution: Lambda Functions (CloudWatch Logs)
+Beyond just observing the EC2 instance state, examining the CloudWatch logs provides crucial insight into the Lambda functions’ execution, confirming they ran successfully and identified the correct instances.
+
+![Image](https://github.com/user-attachments/assets/a87dfd4d-e6a0-4f1b-bbc9-76801ee11499)
+![Image](https://github.com/user-attachments/assets/63e4416f-c7c6-41d9-a133-87fd7a037ac3)
+![Image](https://github.com/user-attachments/assets/1a2a3d0e-e940-4321-a0ed-37d1ce2435d3)
+
+### Witnessing the Automation in Action (EC2 Instance State Changes)
 
 
 
-
-
-
-
-
-### Targets:
 
 
 
